@@ -1,90 +1,115 @@
-# AI-Powered Resume Analyzer & Job Matcher
+# AI Resume Analyzer & Job Matcher
 
-A complete Python/NLP/ML portfolio project that:
-- extracts text from PDF, DOCX and TXT resumes
-- extracts skills, education, experience and certifications
-- compares a resume against job descriptions
-- calculates TF-IDF/cosine-similarity match scores
-- identifies matching and missing skills
-- ranks multiple jobs
-- generates actionable recommendations
-- provides a Streamlit web interface
+An AI-powered web application that analyzes resumes, extracts important candidate information and skills, and matches candidates with relevant job opportunities.
 
-## 1. Installation
+Built with Python, NLP techniques, Scikit-learn, Pandas, and Streamlit.
 
-```bash
-python -m venv .venv
-```
+---
 
-Windows:
-```bash
-.venv\Scripts\activate
-```
+## 📌 Project Overview
 
-macOS/Linux:
-```bash
-source .venv/bin/activate
-```
+The **AI Resume Analyzer & Job Matcher** helps analyze a candidate's resume and identify relevant job opportunities based on skills and textual similarity.
 
-Install dependencies:
+The application performs resume parsing, text preprocessing, skill extraction, candidate analysis, and job matching.
 
-```bash
-pip install -r requirements.txt
-```
+Users can upload a resume and receive:
 
-## 2. Run
+- Resume analysis
+- Extracted skills
+- Contact information
+- Education information
+- Experience information
+- Certification information
+- Job recommendations
+- Job relevance scores
+- Skill matching information
+- Extracted resume text
 
-```bash
-streamlit run app.py
-```
+---
 
-Then open the local Streamlit URL shown in the terminal.
+## ✨ Features
 
-## 3. Project structure
+### 📄 Resume Analysis
+
+- Upload a resume through the Streamlit web interface
+- Extract text from the uploaded resume
+- Identify candidate information
+- Extract technical and professional skills
+- Detect education details
+- Detect experience information
+- Identify certifications
+
+### 🔍 Skill Extraction
+
+The system processes resume text and identifies skills from the available skills dataset.
+
+Example skills include:
+
+- Python
+- SQL
+- Machine Learning
+- Data Analysis
+- Pandas
+- NumPy
+- Scikit-learn
+- NLP
+- TensorFlow
+- Java
+- JavaScript
+
+### 💼 Job Matching
+
+The application compares resume content with job descriptions and calculates relevance scores.
+
+The matching process considers:
+
+- Resume text
+- Job description
+- Candidate skills
+- Job-related skills
+- Text similarity
+
+### 📊 Job Ranking
+
+Jobs are ranked according to their calculated relevance to the uploaded resume.
+
+### 🌐 Interactive Web Application
+
+The application uses Streamlit to provide an easy-to-use interface for resume analysis and job matching.
+
+---
+
+## 🧠 Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| NLP | Resume text processing and analysis |
+| Scikit-learn | TF-IDF and similarity calculations |
+| Pandas | Dataset and data processing |
+| NumPy | Numerical operations |
+| Streamlit | Web application interface |
+| PyPDF2 | PDF resume text extraction |
+
+---
+
+## 🔄 How It Works
 
 ```text
-resume_job_matcher/
-├── app.py
-├── requirements.txt
-├── README.md
-├── data/
-│   ├── jobs.csv
-│   └── skills.csv
-├── src/
-│   ├── __init__.py
-│   ├── resume_parser.py
-│   ├── text_processor.py
-│   ├── skill_extractor.py
-│   ├── matcher.py
-│   ├── job_ranker.py
-│   └── analyzer.py
-├── tests/
-│   └── test_matcher.py
-└── uploads/
-```
-
-## 4. Dataset
-
-`data/jobs.csv` contains synthetic job descriptions for demonstration and testing.
-`data/skills.csv` contains the skill dictionary used by the rule-based skill extractor.
-
-For a production system, replace the synthetic dataset with licensed/real job data and expand the skill taxonomy.
-
-## 5. Matching approach
-
-The default score combines:
-- 60% TF-IDF cosine similarity between resume and job description
-- 30% skill coverage
-- 10% experience/education keyword alignment
-
-This is intentionally interpretable and easy to explain in an interview.
-
-## 6. Optional upgrade
-
-You can later add Sentence Transformers for embedding-based semantic matching. The current version does not require a large pretrained model download, so it runs easily on a normal laptop.
-
-## 7. Testing
-
-```bash
-python -m unittest discover -s tests -v
-```
+Resume Upload
+      ↓
+Resume Text Extraction
+      ↓
+Text Preprocessing
+      ↓
+Resume Information Analysis
+      ↓
+Skill Extraction
+      ↓
+Resume ↔ Job Description Matching
+      ↓
+Relevance Score Calculation
+      ↓
+Job Ranking
+      ↓
+Recommended Jobs
