@@ -1,0 +1,11 @@
+{
+  "project": "AI-Powered Resume Analyzer & Job Matcher",
+  "jobs": 15,
+  "skills": 85,
+  "supported_resume_formats": [
+    "PDF",
+    "DOCX",
+    "TXT"
+  ],
+  "matching_method": "TF-IDF cosine similarity + skill coverage + experience alignment"
+}

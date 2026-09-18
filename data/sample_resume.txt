@@ -1,0 +1,22 @@
+ARUN KUMAR
+Email: arun@example.com
+Phone: +91 9876543210
+
+SUMMARY
+Python developer and machine learning enthusiast with 2 years of experience building data-driven applications.
+
+EDUCATION
+B.E. Computer Science Engineering
+
+SKILLS
+Python, SQL, Machine Learning, NLP, Scikit-learn, Pandas, NumPy, Git, Data Analysis, Statistics
+
+EXPERIENCE
+Machine Learning Developer - 2 years
+Developed NLP pipelines and predictive models using Python and Scikit-learn.
+Performed feature engineering, data preprocessing and model evaluation.
+Built dashboards and data analysis workflows.
+
+PROJECTS
+AI Resume Analyzer
+Built a resume matching application using Python, NLP and machine learning.
